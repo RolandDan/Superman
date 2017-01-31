@@ -9,7 +9,7 @@ var superman;
 var meteor;
 var title = ['SUPERMAN APOCALYPSE', 132, 80];
 var state = 0;
-var themesong;
+//var themesong;
 var img1;
 var img2;
 var helptext = ['Use Left and Right Arrows to move left and right', 100, 390];
@@ -30,7 +30,7 @@ function preload() {
   img1 = loadImage("skyline.jpg");
   img2 = loadImage('superman_logo.png');
 
-  themesong = loadSound('supermanthemesong.mp3')
+  //themesong = loadSound('supermanthemesong.mp3')
 
 }
 
@@ -42,8 +42,8 @@ function setup() {
 
   img2.resize(300, 210);
 
-  themesong.setVolume(1);
-  themesong.play();
+  //themesong.setVolume(1);
+  //themesong.play();
 
   superman = createSprite(400, 590);
   var supermanAnimation = superman.addAnimation("floating", "superman1new.png", "superman3new.png");
