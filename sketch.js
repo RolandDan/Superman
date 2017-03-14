@@ -27,8 +27,8 @@ var button = {
 var i = 0;
 
 function preload() {
-  img1 = loadImage("skyline.jpg");
-  img2 = loadImage('superman_logo.png');
+  img1 = loadImage("assets/skyline.jpg");
+  img2 = loadImage('assets/superman_logo.png');
 
   //themesong = loadSound('supermanthemesong.mp3')
 
@@ -46,8 +46,8 @@ function setup() {
   //themesong.play();
 
   superman = createSprite(400, 590);
-  var supermanAnimation = superman.addAnimation("floating", "superman1new.png", "superman3new.png");
-  superman.addAnimation("punching", "punch1.png", "punch6.png");
+  var supermanAnimation = superman.addAnimation("floating", "assets/superman1new.png", "assets/superman3new.png");
+  superman.addAnimation("punching", "assets/punch1.png", "assets/punch6.png");
 
 }
 
@@ -131,7 +131,7 @@ function draw() {
     //create meteor & meteor speed
     for (; i < 5; i++) {
       meteor = createSprite(random(0, width), 0);
-      var meteorAnimation = meteor.addAnimation("falling", "meteor1.png", "meteor8.png");
+      var meteorAnimation = meteor.addAnimation("falling", "assets/meteor1.png", "assets/meteor8.png");
       meteor.velocity.y = (random(1, 6))
       meteors.push(meteor)
 
@@ -147,7 +147,7 @@ function draw() {
     //meteor-superman collide & score
       if (meteors[j].collide(superman) && keyIsDown(UP_ARROW)) {
       	explosion = createSprite(meteors[j].position.x, meteors[j].position.y);
-  		var explosionAnimation = explosion.addAnimation("explode", "exp1.png", "exp5.png");
+  		var explosionAnimation = explosion.addAnimation("explode", "assets/exp1.png", "assets/exp5.png");
         meteors[j].position.x = random(0, width);
         meteors[j].position.y = -50; 
         explosion.life = 20; 
